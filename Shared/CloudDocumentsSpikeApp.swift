@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CloudDocumentsSpikeApp: App {
+    @StateObject var storage: Storage = Storage()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(storage: storage)
         }
     }
 }

@@ -15,6 +15,8 @@
 		E52B5C2D2564BC4F00A2B89A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B5C022564BC4E00A2B89A /* ContentView.swift */; };
 		E52B5C2E2564BC4F00A2B89A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52B5C032564BC4E00A2B89A /* Assets.xcassets */; };
 		E52B5C2F2564BC4F00A2B89A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52B5C032564BC4E00A2B89A /* Assets.xcassets */; };
+		E52B5C4E2564BE2400A2B89A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B5C4D2564BE2400A2B89A /* Model.swift */; };
+		E52B5C4F2564BE2400A2B89A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B5C4D2564BE2400A2B89A /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,7 @@
 		E52B5C272564BC4E00A2B89A /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		E52B5C292564BC4F00A2B89A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E52B5C482564BD4000A2B89A /* CloudDocumentsSpike.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudDocumentsSpike.entitlements; sourceTree = "<group>"; };
+		E52B5C4D2564BE2400A2B89A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,7 @@
 				E52B5C012564BC4E00A2B89A /* CloudDocumentsSpikeApp.swift */,
 				E52B5C022564BC4E00A2B89A /* ContentView.swift */,
 				E52B5C032564BC4E00A2B89A /* Assets.xcassets */,
+				E52B5C4D2564BE2400A2B89A /* Model.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -310,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E52B5C4E2564BE2400A2B89A /* Model.swift in Sources */,
 				E52B5C2C2564BC4F00A2B89A /* ContentView.swift in Sources */,
 				E52B5C2A2564BC4F00A2B89A /* CloudDocumentsSpikeApp.swift in Sources */,
 			);
@@ -319,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E52B5C4F2564BE2400A2B89A /* Model.swift in Sources */,
 				E52B5C2D2564BC4F00A2B89A /* ContentView.swift in Sources */,
 				E52B5C2B2564BC4F00A2B89A /* CloudDocumentsSpikeApp.swift in Sources */,
 			);
