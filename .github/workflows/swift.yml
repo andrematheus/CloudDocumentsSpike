@@ -8,12 +8,23 @@ on:
 
 jobs:
   build:
-
-    runs-on: macos-latest
-
+    runs-on: macos-11.0
+    strategy:
+      matrix:
+        run-config:
+          - { scheme: 'CloudDocumentsSpike (macOS)', destination: 'platform=macOS' }
+          - { scheme: 'CloudDocumentsSpike (iOS)', destination: 'platform=iOS Simulator,OS=14.0,name=iPhone 8' }
     steps:
     - uses: actions/checkout@v2
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+    - name: Show the currently detailed version of Xcode for CLI
+      run: sudo xcode-select -s /Applications/Xcode_12.2.app/Contents/Developer
+    - name: Show the currently detailed version of Xcode for CLI
+      run: xcode-select -p
+    - name: Show Build Settings
+      run: xcodebuild -scheme '${{ matrix.run-config['scheme'] }}' -showBuildSettings
+    - name: Show Build SDK
+      run: xcodebuild -scheme '${{ matrix.run-config['scheme'] }}' -showsdks
+    - name: Show Available Destinations
+      run: xcodebuild -scheme '${{ matrix.run-config['scheme'] }}' -showdestinations
+    - name: build and test
+      run: xcodebuild clean test -scheme '${{ matrix.run-config['scheme'] }}' -destination '${{ matrix.run-config['destination'] }}' -showBuildTimingSummary

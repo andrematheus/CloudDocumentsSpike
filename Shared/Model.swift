@@ -37,7 +37,7 @@ class Storage: ObservableObject {
         self.connected = true
         
         let filesEnum = FileManager.default.enumerator(atPath: driveURL.path)
-        while let file = filesEnum?.nextObject() as? String {
+        while (filesEnum?.nextObject() as? String) != nil {
             filesFound += 1
         }
     }
