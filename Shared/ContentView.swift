@@ -11,14 +11,15 @@ struct ContentView: View {
     @ObservedObject var storage: Storage
     
     var body: some View {
-        VStack {
+        Form {
             Text("Connected: \(storage.connected.description)")
             Text("Files Found: \(storage.filesFound)")
+            Text("Folder exists: \(storage.folderExists.description)")
+            Text("Status: \(storage.status)")
             Button("Change it") {
-                storage.connected = true
-                storage.filesFound = 10
+                storage.connect()
             }.padding()
-        }.padding()
+        }.frame(minWidth: 350, minHeight: 250)
     }
 }
 
